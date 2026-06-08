@@ -1,0 +1,12 @@
+node_modules/
+out/
+dist/
+release/
+.DS_Store
+.env
+.env.example
+.vscode
+.build
+backend
+config/*
+config

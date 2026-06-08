@@ -1,0 +1,31 @@
+appId: com.academic.translator
+productName: 学术翻译器
+icon: icons/appicon.png
+directories:
+  buildResources: resources
+  output: release
+files:
+  - '!**/.vscode/*'
+  - '!src/*'
+  - '!electron.vite.config.*'
+  - '!{.eslintignore,.eslintrc.cjs,.prettierignore,.prettierrc.yaml,dev-app-update.yml,CHANGELOG.md,README.md}'
+  - '!{tsconfig.json,tsconfig.node.json,tsconfig.web.json}'
+  - '!node_modules/**/*'
+win:
+  icon: icons/appicon.png
+  target:
+    - nsis
+  artifactName: ${name}-${version}-setup.${ext}
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+mac:
+  icon: icons/appicon.png
+  target:
+    - dmg
+  artifactName: ${name}-${version}.${ext}
+linux:
+  icon: icons/appicon.png
+  target:
+    - AppImage
+  artifactName: ${name}-${version}.${ext}
